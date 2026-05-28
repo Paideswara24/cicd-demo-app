@@ -32,7 +32,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>4.7.0</version>
+				<version>4.2.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudhub2Deployment>
@@ -46,7 +46,7 @@
 						<applicationName>${appName}</applicationName>
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
-							<cpu>${vCores}</cpu>
+							<vCores>${vCores}</vCores>
 							<replicas>${replicas}</replicas>
 						</deploymentSettings>
 					</cloudhub2Deployment>
