@@ -44,11 +44,6 @@
 						<username>${user}</username>
 						<password>${pass}</password>
 						<applicationName>${appName}</applicationName>
-						<deploymentSettings>
-							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
-							<cpu>${myCpu}</cpu>
-							<amount>${myReplicas}</amount>
-						</deploymentSettings>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
