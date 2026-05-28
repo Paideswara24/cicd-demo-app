@@ -11,11 +11,15 @@
 
 	<name>cicd-demo-app</name>
 
+	<description />
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.11.0</app.runtime>
+		<tags />
+		<categories>[]</categories>
+		<fields>[]</fields>
 	</properties>
 
 	<build>
@@ -36,14 +40,15 @@
 						<provider>MC</provider>
 						<environment>${environment}</environment>
 						<target>${targetName}</target>
-						<muleVersion>${mule Version}</muleVersion>
+						<muleVersion>${muleVersion}</muleVersion>
 						<username>${user}</username>
 						<password>${pass}</password>
 						<applicationName>${appName}</applicationName>
-						<replicas>${replicas}</replicas>
-						<javaVersion>${javaVersion}</javaVersion>
-						<releaseChannel>EDGE</releaseChannel>
-						<vCores>{vCores}</vCores>
+						<deploymentSettings>
+							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+							<cpu>${vCores}</cpu>
+							<replicas>${replicas}</replicas>
+						</deploymentSettings>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
