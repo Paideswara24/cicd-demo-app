@@ -46,8 +46,8 @@
 						<applicationName>${appName}</applicationName>
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
-							<vCores>${vCoresSetting}</vCores>
-							<replicas>${replicasSetting}</replicas>
+							<vCores>${myCpu}</vCores>
+							<replicas>${myReplicas}</replicas>
 						</deploymentSettings>
 					</cloudhub2Deployment>
 				</configuration>
