@@ -46,7 +46,6 @@
 						<applicationName>${appName}</applicationName>
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
-							<integrationsPlatform>CloudHub2</integrationsPlatform>
 							<vCores>${vCoresSetting}</vCores>
 							<replicas>${replicasSetting}</replicas>
 						</deploymentSettings>
