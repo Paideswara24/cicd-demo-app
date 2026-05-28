@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ec95159c-881a-4137-bc54-352d353c4b29" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="cicd-demo-appFlow" doc:id="fc9997a7-6938-4396-a91b-7ee97ef41ecb" >
+		<http:listener doc:name="Listener" doc:id="d42f06cf-c8c1-4851-b9e8-56b09d1324b4" config-ref="HTTP_Listener_config" path="/cicd"/>
+		<logger level="INFO" doc:name="Logger" doc:id="cac65bbe-68fa-4907-9b9f-7cae280bab7c" />
+		<set-payload value='#["ci cd deployement success"]' doc:name="Set Payload" doc:id="232b5651-6f9b-4929-a01c-c3bebe424458" />
+		<logger level="INFO" doc:name="Logger" doc:id="bddcb64d-9e58-45cc-9f68-944adc2f251c" message="#[payload]"/>
+	</flow>
+</mule>
